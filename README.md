@@ -64,18 +64,16 @@ Candidate scenarios are compared using failure risk, risk reduction, adjustment 
 ### 5. Agentic Decision
 
 The agent evaluates the scenario results and produces:
-
-copy
-
-
+```text
 RECOMMEND
 ESCALATE
 NO_ACTION_NEEDED
+```
+
 ---
 ### System Workflow
-copy
-
-
+
+```text
 AI4I Dataset
      ↓
 Data Loader
@@ -93,6 +91,8 @@ Scenario Comparison
 Agent
      ↓
 Streamlit Dashboard
+
+```
 ## Workflow Explanation
 
 1. Data Loading: Machine-condition data is loaded from the AI4I dataset.
@@ -139,9 +139,7 @@ Instead of:
 
 Prediction Only
 the system provides:
-copy
-
-
+```text
 Prediction
     ↓
 Simulation
@@ -149,6 +147,7 @@ Simulation
 Scenario Evaluation
     ↓
 Decision Support
+```
 The novelty is primarily architectural and integrative, extending the AI-enabled Digital Twin concept toward agentic decision support.
 
 ## Technology Stack
@@ -168,9 +167,7 @@ The novelty is primarily architectural and integrative, extending the AI-enabled
 ---
 
 ## Architecture
-copy
-
-
+```text
                     ┌──────────────────────┐
                     │     AI4I Dataset     │
                     │       ai4i.csv       │
@@ -215,6 +212,7 @@ copy
                     ┌──────────────────────┐
                     │ Streamlit Dashboard  │
                     └──────────────────────┘
+```
 ---
 
 ## Dataset
@@ -237,9 +235,7 @@ The failure-mode columns are not used as primary model inputs to avoid target le
 
 --- 
 ## Project Structure
-copy
-
-
+```text
 AgentTwinDefect AI/
 │
 ├── agenttwindefect/
@@ -257,11 +253,10 @@ AgentTwinDefect AI/
 │
 ├── dashboard.py
 └── README.md
+```
 ---
 ### Running the Project
-copy
-
-
+```text
 Install Dependencies
 pip install pandas numpy scikit-learn streamlit
 Complete Pipeline
@@ -276,6 +271,7 @@ Agent
 python -m agenttwindefect.agent
 Dashboard
 python -m streamlit run dashboard.py
+```
 
 ## Model Evaluation
 The Random Forest model is evaluated using:
@@ -287,13 +283,12 @@ F1 Score
 Confusion Matrix
 Feature Importance
 ## Current test performance:
-copy
-
-
+```text
 Accuracy  : approximately 98.3%
 Precision : approximately 88.6%
 Recall    : approximately 57.4%
 F1 Score  : approximately 69.7%
+```
 Because the dataset is imbalanced, accuracy is considered together with failure-class recall and F1 score.
 
 ## Expected Outcomes
